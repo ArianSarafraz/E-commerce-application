@@ -15,7 +15,12 @@ function LoginForm() {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm({
+    defaultValues: {
+      username: "johnd",
+      password: "m38rmF$",
+    },
+  });
 
   const { login, isLoading } = useAuth();
   const navigate = useNavigate();
