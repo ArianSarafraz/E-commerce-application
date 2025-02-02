@@ -14,7 +14,7 @@ function SingleProduct({ product, handleAddToCart }) {
           <img
             src={product.image}
             alt={product.title}
-            className="h-40 w-40 object-contain mb-4"
+            className="h-40 w-40 object-contain mb-4 hover:scale-110 transition-transform transform duration-300 ease-in-out cursor-pointer "
           />
         </div>
         <h2 className="text-xl font-bold h-20 py-5 mb-4 text-blue-950">

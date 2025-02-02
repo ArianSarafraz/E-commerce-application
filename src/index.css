@@ -24,10 +24,6 @@ body {
   background-color: #172554;
 }
 
-.footer {
-  position: static;
-  bottom: 0;
-}
 .cart-logo {
   position: relative;
 }
@@ -57,4 +53,8 @@ body {
   body {
     padding: 0;
   }
+}
+
+.section-container {
+  
 }

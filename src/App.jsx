@@ -19,17 +19,17 @@ function App() {
           <Toaster />
           <Routes>
             <Route path="/login" element={<Login />} />
+            <Route path="/" element={<Home />} />
             <Route
-              path="/"
+              path="/products"
               element={
                 <PrivateRoute>
                   <AppLayout />
                 </PrivateRoute>
               }
             >
-              <Route index element={<Home />} />
-              <Route path="products" element={<Products />} />
-              <Route path="products/:id" element={<Product />} />
+              <Route index element={<Products />} />
+              <Route path=":id" element={<Product />} />
               <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>

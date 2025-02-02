@@ -5,6 +5,7 @@ import Loader from "../ui/Loader";
 import { useEffect } from "react";
 import http from "../services/httpService";
 import toast from "react-hot-toast";
+import Footer from "../ui/Footer";
 
 function Products() {
   const {
@@ -38,18 +39,21 @@ function Products() {
   if (isLoading) return <Loader />;
 
   return (
-    <div className="flex">
-      <div className="w-md:w-3/4 p-4">
-        <ProductsList products={products} />
+    <>
+      <div className="flex">
+        <div className="w-md:w-3/4 p-4">
+          <ProductsList products={products} />
+        </div>
+        <div className="hidden md:flex md:w-1/4 p-4">
+          <CategoriesSidebar
+            isLoading={isLoading}
+            categories={categories}
+            setCategory={setCategory}
+          />
+        </div>
       </div>
-      <div className="hidden md:flex md:w-1/4 p-4">
-        <CategoriesSidebar
-          isLoading={isLoading}
-          categories={categories}
-          setCategory={setCategory}
-        />
-      </div>
-    </div>
+      <Footer />
+    </>
   );
 }
 

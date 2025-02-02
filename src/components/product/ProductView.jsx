@@ -53,7 +53,11 @@ function ProductView() {
           <h1 className="text-xl mb-6 text-center text-blue-950 font-sans font-bold">
             {product.title}
           </h1>
-          <img src={product.image} alt={product.title} className="w-52 h-80" />
+          <img
+            src={product.image}
+            alt={product.title}
+            className="w-52 h-80 hover:scale-110 transition-transform transform duration-300 ease-in-out cursor-pointer"
+          />
         </div>
         <div className="bg-white w-3/5 md:w-2/5 flex items-center flex-col p-5 rounded-sm  h-auto">
           <h1 className="text-blue-950 text-center font-bold text-2xl border-b-2 mb-9">
