@@ -7,14 +7,14 @@ function SingleProduct({ product, handleAddToCart }) {
   return (
     <div
       key={product.id}
-      className="bg-white shadow-md rounded-lg p-6 flex flex-col"
+      className="bg-white shadow-md rounded-lg p-6 flex flex-col hover:scale-105 transition-transform transform duration-300 ease-in-out cursor-pointer"
     >
       <Link to={`${product.id}`}>
         <div className="flex justify-center">
           <img
             src={product.image}
             alt={product.title}
-            className="h-40 w-40 object-contain mb-4 hover:scale-110 transition-transform transform duration-300 ease-in-out cursor-pointer "
+            className="h-40 w-40 object-contain mb-4  "
           />
         </div>
         <h2 className="text-xl font-bold h-20 py-5 mb-4 text-blue-950">

@@ -10,10 +10,11 @@ function CartProvider({ children }) {
 
   // Handlers
   const handleAddToCart = (product) => {
+    const plusProduct = { ...product, count: 1 };
     if (cart.some((cartItem) => cartItem.id === product.id)) {
       return;
     }
-    setCart((prevCart) => [...prevCart, product]);
+    setCart((prevCart) => [...prevCart, plusProduct]);
     toast.success("Product added to cart.");
   };
 
