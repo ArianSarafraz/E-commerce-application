@@ -1,6 +1,6 @@
 function HomeSection() {
   return (
-    <div className="section-container mt-20 mb-24 grid grid-cols-3 grid-rows-2 gap-4 w-3/5  place-self-center">
+    <div className="section-container mt-20 mb-24 grid grid-cols-3 grid-rows-2 gap-16 w-3/5  place-self-center">
       <div className="rounded-lg overflow-hidden">
         <img
           src="woman2.jpg"
